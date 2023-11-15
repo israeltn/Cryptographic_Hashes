@@ -7,7 +7,7 @@ def hashing(self, message):
         message = input("Enter Message: ")        
         data_to_hash = message + self.secret_key
         hasher = hashlib.sha256()
-        hasher.update(message.encode()) 
+        hasher.update(data_to_hash.encode()) 
         hashed_reuslt = hasher.hexdigest()
         authenticated_message = 'Message:' + message + " " + 'Hashed Result:' + hashed_reuslt 
         print(authenticated_message)
